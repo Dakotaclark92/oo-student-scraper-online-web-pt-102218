@@ -13,7 +13,7 @@ class CommandLineInteface
   end
 
   def make_students
-    students_array = Scraper.scrape_index_page(INDEX_URL)
+    students_students = Scraper.scrape_index_page(INDEX_URL)
     Student.create_from_collection(students_array)
   end
 
