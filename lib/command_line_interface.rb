@@ -27,8 +27,8 @@ class CommandLineInterface
     Student.all.each do |student|
       profile_url = BASE_PROFILE_URL
       # + "#{student.name}"
-      attribute = Scraper.scrape_profile_page(profile_url)
-      attribute = Scraper.scrape_profile_page(student.profile_url)
+      attributes = Scraper.scrape_profile_page(profile_url)
+      attributes = Scraper.scrape_profile_page(student.profile_url)
       student.add_student_attributes(attributes)
     end
   end
